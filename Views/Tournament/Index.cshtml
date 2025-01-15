@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Tournament Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To the Tournament Page</h1>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Tournament Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tournament in Model)
+            {
+                string formattedTourName = tournament.TourName.Replace(" ", "").ToLower();
+
+                <tr>
+                    <td>@tournament.TournamentId</td>
+                    <td>
+                        <!-- Link to tournament details page with formatted URL -->
+                        <a href="@Url.Action("Index", "Tournament", new { tourName = formattedTourName })">
+                            @tournament.TourName
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
