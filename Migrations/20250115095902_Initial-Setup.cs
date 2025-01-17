@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Tournaments.Migrations
+namespace Home.Migrations
 {
     /// <inheritdoc />
     public partial class InitialSetup : Migration

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Sports\Football\Tournaments
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Sports/Football/Tournaments/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Sports/Football/Tournaments/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Sports/Football/Tournaments/Views/Tournament/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sports/Football/Tournaments/Views/Tournament/Pointstable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxQb2ludHN0YWJsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Sports/Football/Tournaments/Views/_ViewImports.cshtml]

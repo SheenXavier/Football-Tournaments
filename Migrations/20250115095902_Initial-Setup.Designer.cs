@@ -8,7 +8,7 @@ using Tournaments.Data;
 
 #nullable disable
 
-namespace Tournaments.Migrations
+namespace Home.Migrations
 {
     [DbContext(typeof(AppDBContext))]
     [Migration("20250115095902_Initial-Setup")]

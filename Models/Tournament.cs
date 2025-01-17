@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Tournaments.Models;
-
+    
 namespace Tournaments.Models
 {
     public class Tournament
@@ -10,6 +10,6 @@ namespace Tournaments.Models
         public string TourName { get; set; }
 
         // Navigation Property
-        public ICollection<Team> Teams { get; set; }
+        public ICollection<Team> Team { get; set; }
     }
 }

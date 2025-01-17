@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
 using Tournaments.Models;
 using Tournaments.Data;
-
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tournaments.Controllers
 {
@@ -18,18 +19,23 @@ namespace Tournaments.Controllers
         }
         public IActionResult Index()
         {
-            var tournaments = _context.Tournament
-              .ToList();
+            // Retrieve the tournament data from TempData
+            int tournamentId = (int)TempData["TournamentId"];
+            string tournamentName = (string)TempData["TournamentName"];
 
-            // Pass the data to the View
-            return View(tournaments);
+            // Fetch the teams for the selected tournament
+            var teams = _context.Team
+                .Where(t => t.TournamentId == tournamentId)
+                .Include(t => t.Tournament)  // Ensure the related Tournament details are loaded
+                .ToList();
+
+            if (!teams.Any())
+            {
+                return NotFound(); // Return 404 if no teams are found for the tournament
+            }
+
+            return View(teams); // Pass the list of teams directly to the view
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
-

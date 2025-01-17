@@ -11,5 +11,6 @@ namespace Tournaments.Models
 
         // Navigation Property
         public Tournament Tournament { get; set; }
+        
     }
 }

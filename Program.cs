@@ -38,7 +38,7 @@ app.MapControllerRoute(
 // Default route configuration
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Touenament}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
 
